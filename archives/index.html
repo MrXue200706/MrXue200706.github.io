@@ -2,333 +2,469 @@
 <html>
 <head>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
-
-<title>
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
   
-    归档
   
-</title>
-
-<meta property="og:type" content="website">
+  
+  
+  <title>Archives | Fawn&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Fawn&#39;s blog">
 <meta property="og:url" content="http://yoursite.com/archives/index.html">
 <meta property="og:site_name" content="Fawn&#39;s blog">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fawn&#39;s blog">
-
-
-  <link rel="alternative" href="/atom.xml" title="Fawn&#39;s blog" type="application/atom+xml">
-
-
-
-  <link rel="icon" href="/favicon.png">
-
-
-<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
-<link rel="stylesheet" href="/styles/main.css">
-
-
-
-
-
-
+  
+    <link rel="alternative" href="/atom.xml" title="Fawn&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: false,
+          isArchive: true,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
 </head>
-<body
-  
-    class="monochrome"
-  
-  >
-  <div class="mobile-header">
-  <button class="sidebar-toggle" type="button">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="title" href="/">Fawn&#39;s blog</a>
-</div>
-
-  <div class="main-container">
-    <div class="sidebar">
-  <div class="header">
-    <h1 class="title"><a href="/">Fawn&#39;s blog</a></h1>
-    
-    <div class="info">
-      <div class="content">
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/avatar.png" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">薛淇元</a></h1>
+        </hgroup>
         
         
-          <div class="author">薛淇元</div>
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder=" Search...">
+            </form>
+            <div id="local-search-result"></div>
         
-      </div>
-      
-        <div class="avatar">
-          
-            <a href="/about"><img src="/avatar.jpg"></a>
-          
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/categories/开发工具/">玩转开发工具</a></li>
+                        
+                            <li><a  href="/categories/digital">玩转数码</a></li>
+                        
+                            <li><a  href="/categories/cognition">认知提升</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl github"  target="_blank" href="/xxxxx" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/atom.xml" title="rss">rss</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://blog.csdn.net/baidu_21483933">csdn</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://segmentfault.com/blog/maocg_web">segmentfault</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.jianshu.com/users/eb37ef89c746/latest_articles">简书</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">爱动漫,爱游戏,爱编程,爱运动,爱的太多了!</div>
+                </section>
+                
+            </div>
         </div>
-      
-    </div>
-  </div>
-  <div class="body">
-    
-      
-        <ul class="nav">
-          
-            
-              <li class="category-list-container">
-                <a href="javascript:;">分类</a>
-                
-              </li>
-            
-          
-            
-              <li class="tag-list-container">
-                <a href="javascript:;">标签</a>
-                
-              </li>
-            
-          
-            
-              <li class="archive-list-container">
-                <a href="javascript:;">归档</a>
-                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/">2017</a><span class="archive-list-count">2</span></li></ul>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="/" title="Homepage">Homepage</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/archives" title="By Year">By Year</a>
-              </li>
-            
-          
-        </ul>
-      
-        <ul class="nav">
-          
-            
-              <li>
-                <a href="https://github.com/denjones/hexo-theme-chan" title="Chan" target="_blank" rel="external noopener">Chan</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="https://github.com/denjones" title="Github" target="_blank" rel="external noopener">Github</a>
-              </li>
-            
-          
-            
-              <li>
-                <a href="/atom.xml" title="RSS">RSS</a>
-              </li>
-            
-          
-        </ul>
-      
-    
-  </div>
+    </header>
 </div>
 
-    <div class="main-content">
-      
-        <div style="max-width: 1000px">
-      
-          
-
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">薛淇元</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/avatar.png" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">薛淇元</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/categories/开发工具/">玩转开发工具</a></li>
+                
+                    <li><a href="/categories/digital">玩转数码</a></li>
+                
+                    <li><a href="/categories/cognition">认知提升</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="github" target="_blank" href="/xxxxx" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="/xxxxxxxx" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap">
   
   
+    
     
       
       
       <section class="archives-wrap">
         <div class="archive-year-wrap">
-          <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
+          <a  href="/archives/2017" class="archive-year">2017</a>
         </div>
-        <div class="post-list">
+        <div class="archives">
     
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2017/11/02/day1/" >
-  
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a  href="/2017/11/02/day1/" class="archive-article-date">
+      <time datetime="2017-11-02T01:48:31.220Z" itemprop="datePublished">11-02</time>
 </a>
 
-      </h3>
-      
+        </div>
+         
 
-      <div class="article-info">
-        <a href="/2017/11/02/day1/"><span class="article-date">
-  2017-11-02
-</span>
-</a>
-        
+        <div class="article-info info-on-archive">
+          
 
-        
-
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="1-前端的开发方式"><a href="#1-前端的开发方式" class="headerlink" title="1.前端的开发方式"></a>1.前端的开发方式</h1><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">1. 后端渲染(后端直出)</div><div class="line">           所有的数据都是来源于后台</div><div class="line">           由后台拼接html结构，发送给浏览器端，由浏览器渲染对应的样式</div><div class="line">           后台是可以执行html代码的，而html代码是无法执行php代码，会将php代码给注释掉</div><div class="line">2. 前端渲染</div><div class="line">          前端渲染页面结构，如果用到了数据，则会向后台发送ajax请求，请求数据，</div><div class="line">          把请求来的数据，渲染到对应的页面中</div><div class="line"></div><div class="line">3. 混合式的开发      现在用的比较多的一种开发方式</div><div class="line">          既有前端渲染的方式，也有后端渲染的方式</div><div class="line">          对于每个页面当都共有的部分，可以使用后端渲染的方式</div><div class="line">          对于 当前页面独有的部分,则是由当前页面自己来渲染</div></pre></td></tr></table></figure>
-<h1 id="2-网站访问的原理"><a href="#2-网站访问的原理" class="headerlink" title="2.网站访问的原理"></a>2.网站访问的原理</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. 当我们在浏览器时里面输入网址的时候，浏览器会优先到我们当前计算机的c:/window/System32/drivers/etc/hosts文件	 中，查找有没有此域名或是网址对应的IP地址，如果有，则以当前的IP地址所指向的服务器为主。</div><div class="line">2. 如果没有的话，则会到网络上就近的DNS服务器去查找此域名对应的IP地址，近而找到此IP对应的服务器。</div><div class="line">3. 每一台计算机都有一个自己的私有IP地址，127.0.0.1.如果安装了apache服务器的话，此IP地址默认就指向c:/wamp/www文件夹下面的index.php,如果没有index.php的话，则默认的去找index.html，如果都没有的话，则会将当前文件夹下面的	</div><div class="line">    所有的文件显示出来，供你选择。</div></pre></td></tr></table></figure>
-<h1 id="3-配置自己本地的项目"><a href="#3-配置自己本地的项目" class="headerlink" title="3.配置自己本地的项目"></a>3.配置自己本地的项目</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">配置自己本地的项目：</div><div class="line"><span class="number">1.</span> 在C:\wamp\bin\apache\Apache2<span class="number">.2</span><span class="number">.21</span>\conf 下面找到httpd.conf,修改如下内容：</div><div class="line">	#DocumentRoot "c:/wamp/www/"    将原来的删除 掉或是注销</div><div class="line">	DocumentRoot <span class="string">"D:/www"</span>		重新指向一个新的目录  在<span class="number">179</span>行左右</div><div class="line">    </div><div class="line">    #&lt;Directory "c:/wamp/www/"&gt;    将文件夹的指向注销掉 </div><div class="line">	&lt;Directory <span class="string">"D:/www"</span>&gt;		   将新创建的文件夹设置一下，在<span class="number">206</span>行左右</div><div class="line">	</div><div class="line">	# Virtual hosts			再开启虚拟目录     在468行左右</div><div class="line">	Include conf/extra/httpd-vhosts.conf     将这行代码前面的#去掉</div><div class="line"><span class="number">2.</span> 到C:\wamp\bin\apache\Apache2<span class="number">.2</span><span class="number">.21</span>\conf\extra的下面，找到httpd-vhosts.conf，添加如下内容：</div><div class="line">	&lt;VirtualHost *:<span class="number">80</span>&gt;</div><div class="line">    	DocumentRoot <span class="string">"D:/www/bxg"</span>      <span class="comment">// 将启动的根目录指向此文件夹</span></div><div class="line">    	ServerName bxg.com</div><div class="line">    	ServerAlias www.bxg.com</div><div class="line">    	ErrorLog <span class="string">"logs/dummy-host.example.com-error.log"</span></div><div class="line">    	CustomLog <span class="string">"logs/dummy-host.example.com-access.log"</span> common</div><div class="line">	&lt;<span class="regexp">/VirtualHost&gt;</span></div><div class="line"><span class="regexp">	</span></div><div class="line"><span class="regexp">	&lt;VirtualHost *:80&gt;</span></div><div class="line"><span class="regexp">    	DocumentRoot "D:/</span>www/bxg1<span class="string">"      // 将启动的根目录指向此文件夹</span></div><div class="line"><span class="string">    	ServerName bxg1.com</span></div><div class="line"><span class="string">    	ServerAlias www.bxg1.com</span></div><div class="line"><span class="string">    	ErrorLog "</span>logs/dummy-host.example.com-error.log<span class="string">"</span></div><div class="line"><span class="string">    	CustomLog "</span>logs/dummy-host.example.com-access.log<span class="string">" common</span></div><div class="line"><span class="string">	&lt;/VirtualHost&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">	&lt;VirtualHost *:80&gt;</span></div><div class="line"><span class="string">    	DocumentRoot "</span>D:<span class="regexp">/www/</span>bxg2<span class="string">"      // 将启动的根目录指向此文件夹</span></div><div class="line"><span class="string">    	ServerName bxg2.com</span></div><div class="line"><span class="string">    	ServerAlias www.bxg2.com</span></div><div class="line"><span class="string">    	ErrorLog "</span>logs/dummy-host.example.com-error.log<span class="string">"</span></div><div class="line"><span class="string">    	CustomLog "</span>logs/dummy-host.example.com-access.log<span class="string">" common</span></div><div class="line"><span class="string">	&lt;/VirtualHost&gt;</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">	&lt;VirtualHost *:80&gt;</span></div><div class="line"><span class="string">    	DocumentRoot "</span>D:<span class="regexp">/www/</span>bxg3<span class="string">"      // 将启动的根目录指向此文件夹</span></div><div class="line"><span class="string">    	ServerName bxg3.com</span></div><div class="line"><span class="string">    	ServerAlias www.bxg3.com</span></div><div class="line"><span class="string">    	ErrorLog "</span>logs/dummy-host.example.com-error.log<span class="string">"</span></div><div class="line"><span class="string">    	CustomLog "</span>logs/dummy-host.example.com-access.log<span class="string">" common</span></div><div class="line"><span class="string">	&lt;/VirtualHost&gt;</span></div><div class="line"><span class="string">3. 在C:\Windows\System32\drivers\etc 找到hosts文件，添加域名的指向</span></div><div class="line"><span class="string">	</span></div><div class="line"><span class="string">		127.0.0.1		bxg.com</span></div><div class="line"><span class="string">		127.0.0.1		www.bxg.com</span></div><div class="line"><span class="string">		</span></div><div class="line"><span class="string">		127.0.0.1		bxg1.com</span></div><div class="line"><span class="string">		127.0.0.1		www.bxg1.com</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">		127.0.0.1		bxg2.com</span></div><div class="line"><span class="string">		127.0.0.1		www.bxg2.com</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">		127.0.0.1		bxg3.com</span></div><div class="line"><span class="string">		127.0.0.1		www.bxg3.com</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">4. 使用特定的域名就可以访问到特定的项目文件了。</span></div></pre></td></tr></table></figure>
-<h1 id="4-使用其它盘的文件夹做为根目录"><a href="#4-使用其它盘的文件夹做为根目录" class="headerlink" title="4.使用其它盘的文件夹做为根目录"></a>4.使用其它盘的文件夹做为根目录</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 在C:\wamp\bin\apache\Apache2<span class="number">.2</span><span class="number">.21</span>\conf 下面找到httpd.conf,修改如下内容：</div><div class="line">	#DocumentRoot "c:/wamp/www/"     这是原来的启动文件夹 原来的根目录</div><div class="line">	DocumentRoot <span class="string">"d:/roots"</span>			这是现在的启动文件夹 现在的根目录</div><div class="line"><span class="number">2.</span> &lt;Directory /&gt;</div><div class="line">    Options FollowSymLinks</div><div class="line">    AllowOverride None</div><div class="line">    Order deny,allow</div><div class="line">    #Deny from all</div><div class="line">	Allow <span class="keyword">from</span> all      开启权限</div><div class="line">  &lt;<span class="regexp">/Directory&gt;</span></div><div class="line"><span class="regexp">3. 在207行左右，修改如下内容：</span></div><div class="line"><span class="regexp">	#&lt;Directory "c:/</span>wamp/www/<span class="string">"&gt;     将此行代码删除掉或是注释掉</span></div><div class="line"><span class="string">	&lt;Directory "</span>d:<span class="regexp">/roots"&gt;</span></div><div class="line"><span class="regexp">	</span></div><div class="line"><span class="regexp">3. 以后所有的项目文件夹都需要放置在d:/</span>roots文件夹下面</div><div class="line"><span class="number">4.</span> 其它的配置同上，需要设置hosts文件中的域名和IP的映射，还需要在httpd-vhosts.conf进行虚拟主机的设置</div></pre></td></tr></table></figure>
-<h1 id="5-设置入口导航"><a href="#5-设置入口导航" class="headerlink" title="5.设置入口导航"></a>5.设置入口导航</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> 在浏览器里输入studyit.com其实就是访问此根目录下面的index.php或是index.html</div><div class="line"><span class="number">2.</span> 在浏览器里面输入studyit.com与studyit.com/index.php的效果是一样的,也是查找此根目录下面的index.php</div><div class="line"><span class="number">3.</span> 因此要想实现在地址栏中输入不同的地址可以访问不同网站的效果的话，需要设置一个入口路由</div><div class="line">  	因此需要新建一个index.php，在此文件内根据用户输入的内容，加载不同的页面返回给浏览器</div><div class="line"><span class="number">4.</span> 在index.php文件里面，是可以执行html代码的</div></pre></td></tr></table></figure>
-<p>#6.获取地址栏中index.php后面的信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"> &lt;?php</div><div class="line">  header(&quot;Content-type:text/html;charset=utf-8&quot;);</div><div class="line"></div><div class="line">//   echo &apos;这是一个后台语言中的输出信息。。。&apos;;</div><div class="line">// 后台语言是可以加载可是解析html代码 的，可以通过include将html代码引入过来</div><div class="line">//		include  &apos;/views/dashboard/index.html&apos;;</div><div class="line">//		include  &apos;/views/dashboard/login.html&apos;;</div><div class="line">//		include  &apos;/views/teacher/list.html&apos;;</div><div class="line">//		include  &apos;/views/user/list.html&apos;;</div><div class="line"></div><div class="line">	//	$_SERVER 可以获取有关服务器的一切信息，其中就包括用户的访问网址</div><div class="line">	//  index.php后面的地址信息，是存在于PATH_INFO这个属性当中的</div><div class="line">		//echo $_SERVER[&apos;PATH_INFO&apos;];</div><div class="line"></div><div class="line">			//var_dump($_SERVER);</div><div class="line"></div><div class="line">    $path = $_SERVER[&quot;PATH_INFO&quot;];   ///views/dashboard/index</div><div class="line"></div><div class="line">    include $path.&quot;.html&quot;;  // 获取用户输入的内容再拼接上.html页面，就可以返回给浏览器供浏览器渲染了</div><div class="line"></div><div class="line">    // 此时的index.php就相当于是一个入口路由或是一个路由导航</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
-<h1 id="7-通过用户输入的不同域名访问不同的页面"><a href="#7-通过用户输入的不同域名访问不同的页面" class="headerlink" title="7.通过用户输入的不同域名访问不同的页面"></a>7.通过用户输入的不同域名访问不同的页面</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">$path = &apos;&apos;;</div><div class="line">  if(array_key_exists(&apos;PATH_INFO&apos;,$_SERVER))&#123;</div><div class="line">  // 判断某个数组当中是否有某个属性  array_key_exists()</div><div class="line">  	// 用户输入的内容里面有index.php后面的信息的时候，可以用如下的方式进行判断</div><div class="line">  	 $path = $_SERVER[&quot;PATH_INFO&quot;];   //   /views/dashboard/index</div><div class="line">   		// string.substr   &quot;abc&quot;.slice(1)</div><div class="line">   		 $path = substr($path,1);    // js中的切割字符串是split() 而PHP中切割字符中是用explode()</div><div class="line"></div><div class="line">   		$arr = explode(&apos;/&apos;,$path);</div><div class="line"></div><div class="line">   		if(count($arr) ==2)&#123;  // dashboar/index  也就是数组中有两个内容的时候</div><div class="line">   			$path = &apos;/views/&apos;.$path;</div><div class="line">   		&#125;else if(count($arr)==1)&#123; // index</div><div class="line">   		    $path = &apos;/views/dashboard/&apos;.$path;</div><div class="line">   		&#125;</div><div class="line">  &#125;else &#123;</div><div class="line">  			$path = &apos;/views/dashboard/index&apos;;</div><div class="line">  &#125;</div><div class="line">	//var_dump($arr);</div><div class="line"></div><div class="line">	 // count()</div><div class="line"></div><div class="line">   include  $path.&quot;.html&quot;;  // 获取用户输入的内容再拼接上.html页面，就可以返回给浏览器供浏览器渲染了</div></pre></td></tr></table></figure>
-<p># </p>
-
-        
-      </div>
-    </div>
-
-  
-
-  
+          
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
     
-  
-
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2017/11/02/hello-world/" >
-  Hello World
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a  href="/2017/11/02/hello-world/" class="archive-article-date">
+      <time datetime="2017-11-02T00:57:25.230Z" itemprop="datePublished">11-02</time>
 </a>
 
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2017/11/02/hello-world/"><span class="article-date">
-  2017-11-02
-</span>
-</a>
-        
-
-        
-
-      </div>
-      <div class="article-entry">
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-      </div>
-    </div>
-
+        </div>
+         
+  
+    <h1 itemprop="name">
+      <a  class="archive-article-title" href="/2017/11/02/hello-world/">Hello World</a>
+    </h1>
   
 
 
+        <div class="article-info info-on-archive">
+          
 
-
-
-
-          <div class="main-footer">
+          
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
   
-    © 2017 Fawn&#39;s blog - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
   
+    </div></section>
+  
+
+    
+
+
 </div>
-
-      
-        </div>
-      
-    </div>
-  </div>
-  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
-  <link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
-
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe.
-             It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-      <!-- Container that holds slides.
-                PhotoSwipe keeps only 3 of them in the DOM to save memory.
-                Don't modify these 3 pswp__item elements, data is added later on. -->
-      <div class="pswp__container">
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-        <div class="pswp__item"></div>
-      </div>
-
-      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-      <div class="pswp__ui pswp__ui--hidden">
-
-        <div class="pswp__top-bar">
-
-          <!--  Controls are self-explanatory. Order can be changed. -->
-
-          <div class="pswp__counter"></div>
-
-          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-          <button class="pswp__button pswp__button--share" title="Share"></button>
-
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-          <!-- element will get class pswp__preloader--active when preloader is running -->
-          <div class="pswp__preloader">
-            <div class="pswp__preloader__icn">
-              <div class="pswp__preloader__cut">
-                <div class="pswp__preloader__donut"></div>
-              </div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 薛淇元
             </div>
-          </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
         </div>
-
-        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div>
-
-        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-
-        <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
-        </div>
-      </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >极客到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 4;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'xxxxx', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?xxxxxx";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+    <button class="hide-labels">TAG 开关</button>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $(".article-info").toggle(200);
+            });
+        });
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
   </div>
-
-  <script src="/PhotoSwipe/photoswipe.js"></script>
-  <script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
-
-
-<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
-<script src="/scripts/main.js"></script>
-
 </body>
 </html>
