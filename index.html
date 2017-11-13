@@ -306,27 +306,32 @@
           
         <blockquote>
 <p>H5C3知识</p>
-<p>##H5</p>
-<p>###什么是H5</p>
-<ol>
+</blockquote>
+<h2 id="H5"><a href="#H5" class="headerlink" title="H5"></a>H5</h2><h3 id="什么是H5"><a href="#什么是H5" class="headerlink" title="什么是H5"></a>什么是H5</h3><ol>
 <li>狭义的H5：HTML4的版本升级；包括HTML5/javascript/CSS3。API的一套技术；</li>
-<li>广义的H5：HTML5行业的代名词；新技术的代名词；<br>###常用的语义化标签</li>
+<li>广义的H5：HTML5行业的代名词；新技术的代名词；</li>
 </ol>
-<ul>
+<h3 id="常用的语义化标签"><a href="#常用的语义化标签" class="headerlink" title="常用的语义化标签"></a>常用的语义化标签</h3><ul>
 <li>header头部；</li>
 <li>nav导航； </li>
 <li>主体部分；</li>
 <li>article一整段文字，跟P标签不一样，P标签只是一个段落；</li>
 <li>aside侧边栏</li>
 <li>section节，独立的一节；</li>
-<li>footer页脚；<br>语义化标签的好处：</li>
+<li>footer页脚；</li>
 </ul>
+<blockquote>
+<p>语义化标签的好处：</p>
+</blockquote>
 <ol>
 <li>方便后期维护管理</li>
 <li>搜索引擎优化SEO</li>
-<li>帮助残障人士阅读<br>兼容性处理：引入html5shiv.js<br>###表单元素<br>####表单元素类型</li>
+<li>帮助残障人士阅读</li>
 </ol>
-<ul>
+<blockquote>
+<p>兼容性处理：引入html5shiv.js</p>
+</blockquote>
+<h3 id="表单元素"><a href="#表单元素" class="headerlink" title="表单元素"></a>表单元素</h3><h4 id="表单元素类型"><a href="#表单元素类型" class="headerlink" title="表单元素类型"></a>表单元素类型</h4><ul>
 <li>email邮箱，限制用户输入带有@符号的内容</li>
 <li>url网址，限制用户输入带有<a href="http://或https://的内容" target="_blank" rel="external">http://或https://的内容</a></li>
 <li>tel电话号码，移动端会弹出数字键盘</li>
@@ -335,141 +340,287 @@
 <li>range范围，只允许输入数字，可选属性max/min/value/step</li>
 <li>time时间，value格式：HH:MM</li>
 <li>date日期，value格式：YYYY:MM:DD，带有日期选择控件</li>
-<li>color颜色选择，value格式是完整的十六进制，带有拾色器<br>####表单属性</li>
+<li>color颜色选择，value格式是完整的十六进制，带有拾色器</li>
+</ul>
+<h4 id="表单属性"><a href="#表单属性" class="headerlink" title="表单属性"></a>表单属性</h4><ul>
 <li>placeholder=””占位符，输入值后清除</li>
 <li>autofocus自动聚焦</li>
 <li>autocomplete=””自动填充，输入时会自动显示输入过的内容，默认值on</li>
 <li>required必填，该输入框必须有内容</li>
 <li>pattern=””自定义验证，可以自定义正则表达式验证</li>
-<li>multiple多选，用于type=”file”类型的文件输入框，选择多个文件<br>####表单元素<br>datalist配合input提供输入的选项<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Webpage: &lt;input <span class="built_in">type</span>=<span class="string">"url"</span> list=<span class="string">"url_list"</span> name=<span class="string">"link"</span> /&gt;</div><div class="line">&lt;datalist id=<span class="string">"url_list"</span>&gt;</div><div class="line">&lt;option label=<span class="string">"W3School"</span> value=<span class="string">"http://www.W3School.com.cn"</span> /&gt;</div><div class="line">&lt;option label=<span class="string">"Google"</span> value=<span class="string">"http://www.google.com"</span> /&gt;</div><div class="line">&lt;option label=<span class="string">"Microsoft"</span> value=<span class="string">"http://www.microsoft.com"</span> /&gt;</div><div class="line">&lt;/datalist&gt;</div></pre></td></tr></table></figure>
-</li>
+<li>multiple多选，用于type=”file”类型的文件输入框，选择多个文件</li>
 </ul>
+<h4 id="表单元素-1"><a href="#表单元素-1" class="headerlink" title="表单元素"></a>表单元素</h4><blockquote>
+<p>datalist配合input提供输入的选项</p>
 </blockquote>
-<p>####表单事件</p>
-<ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Webpage: &lt;input <span class="built_in">type</span>=<span class="string">"url"</span> list=<span class="string">"url_list"</span> name=<span class="string">"link"</span> /&gt;</div><div class="line">&lt;datalist id=<span class="string">"url_list"</span>&gt;</div><div class="line">&lt;option label=<span class="string">"W3School"</span> value=<span class="string">"http://www.W3School.com.cn"</span> /&gt;</div><div class="line">&lt;option label=<span class="string">"Google"</span> value=<span class="string">"http://www.google.com"</span> /&gt;</div><div class="line">&lt;option label=<span class="string">"Microsoft"</span> value=<span class="string">"http://www.microsoft.com"</span> /&gt;</div><div class="line">&lt;/datalist&gt;</div></pre></td></tr></table></figure>
+<h4 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h4><ol>
 <li>oninput用户输入时触发</li>
 <li>oninvalid验证不通过时触发</li>
-<li>setCustomValidity()自定义输入不正确的提示错误信息<br>###多媒体标签</li>
-<li>audio音频，属性：controls=’controls’ autoplay=’autoplay’ loop=’loop’<blockquote>
+<li>setCustomValidity()自定义输入不正确的提示错误信息</li>
+</ol>
+<h3 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h3><ol>
+<li>audio音频，属性：controls=’controls’ autoplay=’autoplay’ loop=’loop’</li>
+</ol>
+<blockquote>
 <p>音频的格式：wav音质好,mp3压缩高文件小,ogg免费无专利限制</p>
 </blockquote>
-</li>
-<li>video视频，属性：controls=’controls’ autoplay=’autoplay’ loop=’loop’<blockquote>
-<p>视频格式：mp4压缩高文件小，ogg免费无专利，webm google开发的免费格式<br>###DOM扩展<br>####获取元素</p>
+<ol>
+<li>video视频，属性：controls=’controls’ autoplay=’autoplay’ loop=’loop’</li>
+</ol>
+<blockquote>
+<p>视频格式：mp4压缩高文件小，ogg免费无专利，webm google开发的免费格式</p>
 </blockquote>
-</li>
+<h3 id="DOM扩展"><a href="#DOM扩展" class="headerlink" title="DOM扩展"></a>DOM扩展</h3><h4 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h4><ol>
 <li>document.querySelector(css选择器)</li>
-<li>document.querySelectorAll(css选择器),得到的是伪数组<br>####操作类名</li>
+<li>document.querySelectorAll(css选择器),得到的是伪数组</li>
+</ol>
+<h4 id="操作类名"><a href="#操作类名" class="headerlink" title="操作类名"></a>操作类名</h4><ol>
 <li>添加类名 .classList.add()</li>
 <li>删除类名 .classList.remove()</li>
 <li>切换类名 .classList.toggle();有则删，无则加</li>
-<li>判断是否包含类名 .classList.contains();返回boolean类型<br>####自定义属性</li>
+<li>判断是否包含类名 .classList.contains();返回boolean类型</li>
+</ol>
+<h4 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h4><ol>
 <li>格式：data-属性名</li>
 <li>获取：.dataset.属性名</li>
 <li>设置：.dataset.属性名=value</li>
 </ol>
-<p>##CSS3</p>
-<p>###私有前缀</p>
-<blockquote>
+<h2 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h2><h3 id="私有前缀"><a href="#私有前缀" class="headerlink" title="私有前缀"></a>私有前缀</h3><blockquote>
 <p>作用：浏览器私有前缀，是浏览器对于新CSS属性的一个提前支持。</p>
+</blockquote>
 <ol>
 <li>safari&amp;chrome:-webkit</li>
 <li>opera(旧版):-o  新版也使用-webkit</li>
 <li>firefox:-moz</li>
-<li>IE:-ms<br>###选择器<br>####属性选择器</li>
+<li>IE:-ms</li>
+</ol>
+<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><h4 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h4><ol>
 <li>e[attr=val]</li>
 <li>e[attr^=val],以val开头的元素</li>
 <li>e[attr$=val],以val结尾的元素</li>
 <li>e[attr*=val],包含val的元素</li>
-<li>e[attr],有属性attr的元素<br>####伪类选择器</li>
+<li>e[attr],有属性attr的元素</li>
 </ol>
-<ul>
+<h4 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h4><ul>
 <li>e:first-child 该类型元素的第一个</li>
 <li>e:last-child 该类型元素的最后一个</li>
 <li>e:nth-child(n),括号内可以是add/even/公式</li>
 <li>e:nth-last-child(n),倒数的第n个元素</li>
 <li>e:target设置e的锚点样式</li>
 <li>e:empty内容为空的标签</li>
-<li>e:not(元素)没有该元素的标签<br>####伪元素选择器</li>
+<li>e:not(元素)没有该元素的标签</li>
+</ul>
+<h4 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h4><ul>
 <li>e::before/after e前面/后面插入伪元素，必须使用content属性，属于行内元素，e只能有一个before或者after</li>
 <li>e::first-letter e标签的第一个字母</li>
 <li>e::first-line e标签的第一行</li>
-<li>e::selection 鼠标选中的区域<br>###盒子样式<br>####文本阴影:<br>text-shadow:x y 模糊半径 color<br>####盒子阴影：<br>box-shadow:x y 模糊半径 扩展半径 color inset(内阴影)<br>模糊半径不能为负数；扩展半径控制阴影大小；不设置内阴影时，就是外阴影<br>####盒子大小：<br>box-sizing:</li>
+<li>e::selection 鼠标选中的区域</li>
 </ul>
+<h3 id="盒子样式"><a href="#盒子样式" class="headerlink" title="盒子样式"></a>盒子样式</h3><h4 id="文本阴影"><a href="#文本阴影" class="headerlink" title="文本阴影:"></a>文本阴影:</h4><blockquote>
+<p>text-shadow:x y 模糊半径 color</p>
+</blockquote>
+<h4 id="盒子阴影："><a href="#盒子阴影：" class="headerlink" title="盒子阴影："></a>盒子阴影：</h4><blockquote>
+<p>box-shadow:x y 模糊半径 扩展半径 color inset(内阴影)<br>模糊半径不能为负数；扩展半径控制阴影大小；不设置内阴影时，就是外阴影</p>
+</blockquote>
+<h4 id="盒子大小："><a href="#盒子大小：" class="headerlink" title="盒子大小："></a>盒子大小：</h4><blockquote>
+<p>box-sizing:</p>
 <ol>
 <li>content-box=设置的大小+padding+border;默认</li>
-<li>border-box;设置多大就是多大<br>####边框半径<br>border-radius:左上 右上 右下 左下 （顺时针）<br>####图片边框<br>border-image:url 切割 平铺方式<br>用来给边框设置图片作为纹理<br>切割不用写单位，直接写数字；平铺方式有stretch repeat round<br>###背景<br>####多背景<br>将多属性连写，用逗号隔开：background:url(),url(),url();<br>####背景尺寸<br>background-size:</li>
+<li>border-box;设置多大就是多大</li>
+</ol>
+</blockquote>
+<h4 id="边框半径"><a href="#边框半径" class="headerlink" title="边框半径"></a>边框半径</h4><blockquote>
+<p>border-radius:左上 右上 右下 左下 （顺时针）</p>
+</blockquote>
+<h4 id="图片边框"><a href="#图片边框" class="headerlink" title="图片边框"></a>图片边框</h4><blockquote>
+<p>border-image:url 切割 平铺方式<br>用来给边框设置图片作为纹理<br>切割不用写单位，直接写数字；平铺方式有stretch repeat round</p>
+</blockquote>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><h4 id="多背景"><a href="#多背景" class="headerlink" title="多背景"></a>多背景</h4><blockquote>
+<p>将多属性连写，用逗号隔开：background:url(),url(),url();</p>
+</blockquote>
+<h4 id="背景尺寸"><a href="#背景尺寸" class="headerlink" title="背景尺寸"></a>背景尺寸</h4><blockquote>
+<p>background-size:</p>
+</blockquote>
+<ol>
 <li>width height;</li>
 <li>cover;图片覆盖整个元素，不在意损失</li>
-<li>contain;图片显示完整，不在意元素大小<br>####背景位置<br>background-position:x y;<br>####背景原点<br>background-origin:</li>
+<li>contain;图片显示完整，不在意元素大小</li>
+</ol>
+<h4 id="背景位置"><a href="#背景位置" class="headerlink" title="背景位置"></a>背景位置</h4><blockquote>
+<p>background-position:x y;</p>
+</blockquote>
+<h4 id="背景原点"><a href="#背景原点" class="headerlink" title="背景原点"></a>背景原点</h4><blockquote>
+<p>background-origin:</p>
+</blockquote>
+<ol>
 <li>padding-box</li>
 <li>border-box</li>
-<li>content-box<br>####背景裁切<br>background-clip:</li>
+<li>content-box</li>
+</ol>
+<h4 id="背景裁切"><a href="#背景裁切" class="headerlink" title="背景裁切"></a>背景裁切</h4><blockquote>
+<p>background-clip:</p>
+</blockquote>
+<ol>
 <li>padding-box</li>
 <li>border-box</li>
-<li>content-box<br>####固定背景<br>background-attachment:fixed;<br>####线性渐变<br>background-image:linear.gradient(方向，颜色，颜色)<br>方向：可以是角度，to left,to top<br>渐变的两个颜色写所占的大小，差值就是渐变区域的大小，0则没有渐变<br>####径向渐变<br>background-image:radial-gradient(长半轴 短半轴 at 圆心 颜色 颜色)<br>正圆时只有一个半径<br>####简写<br>background:background-color | background-image  | background-repeat | background-attachment | background-position<br>###动画<br>####过渡transition:</li>
+<li>content-box</li>
+</ol>
+<h4 id="固定背景"><a href="#固定背景" class="headerlink" title="固定背景"></a>固定背景</h4><blockquote>
+<p>background-attachment:fixed;</p>
+</blockquote>
+<h4 id="线性渐变"><a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h4><blockquote>
+<p>background-image:linear.gradient(方向，颜色，颜色)<br>方向：可以是角度，to left,to top<br>渐变的两个颜色写所占的大小，差值就是渐变区域的大小，0则没有渐变</p>
+</blockquote>
+<h4 id="径向渐变"><a href="#径向渐变" class="headerlink" title="径向渐变"></a>径向渐变</h4><blockquote>
+<p>background-image:radial-gradient(长半轴 短半轴 at 圆心 颜色 颜色)<br>正圆时只有一个半径</p>
+</blockquote>
+<h4 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h4><blockquote>
+<p>background:background-color | background-image  | background-repeat | &gt;background-attachment | background-position</p>
+</blockquote>
+<h3 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h3><h4 id="过渡transition"><a href="#过渡transition" class="headerlink" title="过渡transition:"></a>过渡transition:</h4><ol>
 <li>transition-property:要动的属性</li>
 <li>transition-duration:过渡时间</li>
-<li>transition-timing-function:过渡速度<br>ease/ease-in/ease-out/ease-in-out/linear</li>
+<li>transition-timing-function:过渡速度</li>
+</ol>
+<blockquote>
+<p>ease/ease-in/ease-out/ease-in-out/linear</p>
+</blockquote>
+<ol>
 <li>transition-delay:延时</li>
 <li>简写：transition:property duration timing-function delay</li>
-<li>webkitTransitionEnd事件；元素过渡结束时触发<br>####2D转换：transform:</li>
-<li>translateX()/translateY()/translate(x,y)；位移<br>左负右正，上负下正；只写一个数字就是x轴</li>
-<li>rotate(角度)；旋转<br>顺正负逆</li>
-<li>scale(倍数)；缩放倍数<br>负就缩</li>
+<li>webkitTransitionEnd事件；元素过渡结束时触发</li>
+</ol>
+<h4 id="2D转换：transform"><a href="#2D转换：transform" class="headerlink" title="2D转换：transform:"></a>2D转换：transform:</h4><ol>
+<li>translateX()/translateY()/translate(x,y)；位移</li>
+</ol>
+<blockquote>
+<p>左负右正，上负下正；只写一个数字就是x轴</p>
+</blockquote>
+<ol>
+<li><p>rotate(角度)；旋转</p>
+<blockquote>
+<p>顺正负逆</p>
+</blockquote>
+</li>
+<li><p>scale(倍数)；缩放倍数</p>
+</li>
+</ol>
+<blockquote>
+<p>负就缩</p>
+</blockquote>
+<ol>
 <li>transform-origin:x，y;旋转原点</li>
-<li>skewX()/skewY()/skew(X,Y);倾斜<br>####3D转换：transform:</li>
+<li>skewX()/skewY()/skew(X,Y);倾斜</li>
+</ol>
+<h4 id="3D转换：transform"><a href="#3D转换：transform" class="headerlink" title="3D转换：transform:"></a>3D转换：transform:</h4><ol>
 <li>1translateX/Y/Z();translate3d(x,y,z);3D位移</li>
 <li>rotateX/Y/Z();旋转；</li>
 <li>scaleX/Y();缩放倍数</li>
-<li>perspective:n;视角<br>n是视角原点到z=0平面的距离</li>
-<li>perspective-origin:X,Y;视角原点的位置<br>可以是具体坐标，也可以是关键字</li>
-<li>transform-style:flat/preserve-3d;转换时显示的样式<br>flat：2d样式；preserve-3d:呈现3D效果；<br>###自定义动画：@keyframes name{}<br>{}内写要定义的动画样式<br>#####调用自定义动画：animation:name duration timing-function delay iteration-count direction fill-mode play-state<br>iteration-count:次数 可以是infinite<br>direction:方向 normal正常/alternate交替反向/reverse反向<br>fill-mode:结束状态； none/forwards停留在最后一帧/backwards返回最初状态<br>playstate:播放状态；running播放中/paused暂停<br>###常用API<br>####在线/离线事件</li>
+<li>perspective:n;视角</li>
+</ol>
+<blockquote>
+<p>n是视角原点到z=0平面的距离</p>
+</blockquote>
+<ol>
+<li>perspective-origin:X,Y;视角原点的位置</li>
+</ol>
+<blockquote>
+<p>可以是具体坐标，也可以是关键字</p>
+</blockquote>
+<ol>
+<li>transform-style:flat/preserve-3d;转换时显示的样式</li>
+</ol>
+<blockquote>
+<p>flat：2d样式；preserve-3d:呈现3D效果；</p>
+</blockquote>
+<h3 id="自定义动画：-keyframes-name"><a href="#自定义动画：-keyframes-name" class="headerlink" title="自定义动画：@keyframes name{}"></a>自定义动画：@keyframes name{}</h3><blockquote>
+<p>{}内写要定义的动画样式</p>
+</blockquote>
+<h5 id="调用自定义动画：animation-name-duration-timing-function-delay-iteration-count-direction-fill-mode-play-state"><a href="#调用自定义动画：animation-name-duration-timing-function-delay-iteration-count-direction-fill-mode-play-state" class="headerlink" title="调用自定义动画：animation:name duration timing-function delay iteration-count direction fill-mode play-state"></a>调用自定义动画：animation:name duration timing-function delay iteration-count direction fill-mode play-state</h5><blockquote>
+<p>iteration-count:次数 可以是infinite<br>direction:方向 normal正常/alternate交替反向/reverse反向<br>fill-mode:结束状态； none/forwards停留在最后一帧/backwards返回最初状态<br>playstate:播放状态；running播放中/paused暂停</p>
+</blockquote>
+<h3 id="常用API"><a href="#常用API" class="headerlink" title="常用API"></a>常用API</h3><h4 id="在线-离线事件"><a href="#在线-离线事件" class="headerlink" title="在线/离线事件"></a>在线/离线事件</h4><ol>
 <li>window.ononline=function(){}</li>
-<li>window.onoffline=function(){}<br>####视频videoAPI<br>#####属性<br>音频也适用</li>
+<li>window.onoffline=function(){}</li>
+</ol>
+<h4 id="视频videoAPI"><a href="#视频videoAPI" class="headerlink" title="视频videoAPI"></a>视频videoAPI</h4><h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><blockquote>
+<p>音频也适用</p>
+</blockquote>
+<ol>
 <li>duration总时长</li>
 <li>paused是否暂停，设置或者返回boolean值</li>
 <li>currentTime当前所在位置（时间）,可以设置或者查询</li>
-<li>ended查询视频是否播放结束<br>#####事件</li>
+<li>ended查询视频是否播放结束</li>
+</ol>
+<h5 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h5><ol>
 <li>oncanplay文件可以播放（缓存足够）时触发</li>
 <li>ontimeupdate播放位置改变时触发</li>
-<li>onended视频播放结束时触发<br>#####方法</li>
+<li>onended视频播放结束时触发</li>
+</ol>
+<h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><ol>
 <li>play();开始播放</li>
-<li>pause();暂停播放<br>#####全屏</li>
+<li>pause();暂停播放</li>
+</ol>
+<h5 id="全屏"><a href="#全屏" class="headerlink" title="全屏"></a>全屏</h5><ol>
 <li>显示全屏：video.webkitRequestFullscreen();</li>
 <li>去掉默认控制条：video::-webkit-media-controls-enclosure{display:none !important;}</li>
-<li>显示自定义控制条：z-index必须大于2147483647<br>####页面存储webstorageAPI<br>把自动登录等信息储存在浏览器中，减少对服务器的请求<br>cookie只有4kb大小，由服务器创建<br>#####sessionStorage<br>5mb，由浏览器创建，只存在浏览器中，实际在计算机内存里，有效期是浏览器打开到关闭</li>
+<li>显示自定义控制条：z-index必须大于2147483647</li>
 </ol>
+<h4 id="页面存储webstorageAPI"><a href="#页面存储webstorageAPI" class="headerlink" title="页面存储webstorageAPI"></a>页面存储webstorageAPI</h4><blockquote>
+<p>把自动登录等信息储存在浏览器中，减少对服务器的请求<br>cookie只有4kb大小，由服务器创建</p>
+</blockquote>
+<h5 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h5><blockquote>
+<p>5mb，由浏览器创建，只存在浏览器中，实际在计算机内存里，有效期是浏览器打开到关闭</p>
+</blockquote>
 <ul>
 <li>window.sessionStorage.setItem(key,value);</li>
 <li>window.sessionStorage.getItem(key);</li>
 <li>window.sessionStorage.removeItem(key);</li>
 <li>window.sessionStorage.clear()清空所有</li>
-<li>window.sessionStorage.key(n);n是索引，从0开始<br>#####localStorage<br>5MB；由浏览器创建，储存在浏览器中，实际存在计算机硬盘，永久存储</li>
+<li>window.sessionStorage.key(n);n是索引，从0开始</li>
+</ul>
+<h5 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h5><blockquote>
+<p>5MB；由浏览器创建，储存在浏览器中，实际存在计算机硬盘，永久存储</p>
+</blockquote>
+<ul>
 <li>window.localStorage.setItem(key,value);</li>
 <li>window.localStorage.getItem(key);</li>
 <li>window.localStorage.removeItem(key);</li>
 <li>window.localStorage.clear();</li>
-<li>window.localStorage.key(n);<br>####拖拽事件</li>
+<li>window.localStorage.key(n);</li>
 </ul>
-<ol>
+<h4 id="拖拽事件"><a href="#拖拽事件" class="headerlink" title="拖拽事件"></a>拖拽事件</h4><ol>
 <li>拖拽对象添加属性draggable=’true’；才能实现拖拽</li>
 <li>dragstart 按下鼠标，开始拖拽时触发</li>
 <li>drag 拖拽中，鼠标移动时触发</li>
-<li>dragend 松开鼠标，放下移动对象时触发<br>在事件里清除浏览器的默认行为才能放下对象，e.preventDefault()</li>
+<li>dragend 松开鼠标，放下移动对象时触发</li>
+</ol>
+<blockquote>
+<p>在事件里清除浏览器的默认行为才能放下对象，e.preventDefault()</p>
+</blockquote>
+<ol>
 <li>dragover 按下鼠标，鼠标在目标元素上移动时触发</li>
 <li>dragenter 按下鼠标，拖拽对象进入目标元素时触发</li>
 <li>dragleave 按下鼠标，离开目标元素边缘时触发</li>
-<li>drop 松开鼠标，dragend之前触发<br>####文件读取</li>
+<li>drop 松开鼠标，dragend之前触发</li>
+</ol>
+<h4 id="文件读取"><a href="#文件读取" class="headerlink" title="文件读取"></a>文件读取</h4><ol>
 <li>var fileReader=new FileReader();</li>
 <li>fileReader.readAsDataURL();文件内容转为字符串</li>
 <li>flieReader.readAsText();文件内容转为文本</li>
-<li>fileReader.result;文件读取结果<br>要写在fileReader.onload=funcion(){}事件里面，等待文件加载完成才能使用</li>
-<li>input.files[0];获取上传的文件<br>####获取地理位置</li>
+<li>fileReader.result;文件读取结果</li>
+</ol>
+<blockquote>
+<p>要写在fileReader.onload=funcion(){}事件里面，等待文件加载完成才能使用</p>
+</blockquote>
+<ol>
+<li>input.files[0];获取上传的文件</li>
+</ol>
+<h4 id="获取地理位置"><a href="#获取地理位置" class="headerlink" title="获取地理位置"></a>获取地理位置</h4><ol>
 <li>获取地理位置信息<br>watchID=navigator.geolocation.watchPosition(成功时的回调，失败时的回调，参数设置)</li>
 <li>清除获取的信息<br>navigator.geolocation.clearWatch(watchID);</li>
 </ol>
-</blockquote>
 
       
     </div>
