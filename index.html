@@ -275,6 +275,90 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-移动web" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/11/16/移动web/" class="article-date">
+      <time datetime="2017-11-16T10:06:05.440Z" itemprop="datePublished">2017-11-16</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="移动端布局的三种方式："><a href="#移动端布局的三种方式：" class="headerlink" title="移动端布局的三种方式："></a>移动端布局的三种方式：</h3><h4 id="百分比布局"><a href="#百分比布局" class="headerlink" title="百分比布局"></a>百分比布局</h4><blockquote>
+<p>页面中随视口大小改变的元素使用百分比表示；不随视口大小改变的元素使用固定宽度<br>二倍图：由于不同手机像素密度（PPI）不同，同样大小的图片，在高PPI的手机上会缩小，为了显示正常大小，要放大，但是会失真，所以要提供二倍大小的图片供放大而不失真<br>两个重要的css库：1.reset.css清除浏览器默认样式；2.normalize.css解决不同浏览器的css兼容问题</p>
+</blockquote>
+<h4 id="rem布局"><a href="#rem布局" class="headerlink" title="rem布局"></a>rem布局</h4><blockquote>
+<p>rem是相对root根元素大小的布局，通常是根元素的字体大小</p>
+</blockquote>
+<h5 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h5><ul>
+<li>视口：layout viewport网页布局视口；ideal viewport设备视口大小</li>
+<li>视口设置：<meta name="viewport" content="width=device-width,initial-scale=1.0"><blockquote>
+<p>initial-scale初始缩放比；maximum-scale允许用户的最大缩放比；minimum-scale最小缩放比；user-scalable是否允许用户缩放，yes/no</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h5><blockquote>
+<p>媒体查询是CSS3的中一个强大的工具。它是包含媒体类型以及零或多个检查特定媒体特征条件的表达式。表达式描述了媒体特征, 最终会被解析为 true 或 false.如果是true 那么会执行  如果是false 就不会执行了.通过不同的判别条件识别不同的设备 以给该设备应用不同的样式</p>
+</blockquote>
+<h6 id="引入媒体查询"><a href="#引入媒体查询" class="headerlink" title="引入媒体查询"></a>引入媒体查询</h6><ol>
+<li>link引入：<link rel="stylesheet" href="*.css" media="screen and (width:320px)">;当屏幕宽度为320px时引入该css文件</li>
+<li>style里面引入：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@media screen and (width:375px)&#123;</div><div class="line">    html&#123;</div><div class="line">        font-size:375px/20;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>response.js解决媒体查询的兼容性问题，使得不支持媒体查询的浏览器也可以使用媒体查询</li>
+</ol>
+<h5 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h5><ul>
+<li>布局时，640px大小的设计图，元素大小为:实际大小/32rem<blockquote>
+<p>因为把宽为640px的设计图分为20份，每份大小就是1rem=640/20=32px,，1rem元素在不同大小的屏幕上也应该是1rem大小，实际元素在640px屏幕中所占的大小用rem表示，即为几个rem，实际大小/32rem,则在不同的屏幕上也应该占：实际大小/32rem；其他尺寸的设计图以此类推</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h4><blockquote>
+<p>利用媒体查询，在不同大小的屏幕下，显示不同的样式</p>
+</blockquote>
+<h5 id="屏幕大小的划分"><a href="#屏幕大小的划分" class="headerlink" title="屏幕大小的划分"></a>屏幕大小的划分</h5><ol>
+<li>XS：小于768px，手机 @media(max-width:@screen-xs-max){}</li>
+<li>sm:大于等于768px，小于992px ，平板 @media(max-width:@screen-sm-max)and(min-width:@screen-sm-min){}</li>
+<li>md：大于等于992px，小于1200px，桌面显示器 @media(max-width:@screen-md-max)and(min-width:@screen-md-min){}</li>
+<li>lg：大于等于1200px，大屏幕 @media(min-width:@screen-lg-min){}</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-H5C3" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
